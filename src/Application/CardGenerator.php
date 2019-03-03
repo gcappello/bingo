@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Application;
+
+use App\Utility\NumberUtilities;
 
 class CardGenerator
 {
@@ -35,7 +37,7 @@ class CardGenerator
             for ($i = 1; $i <= $this->rows; $i++) {
                 $excludedNumbers = !empty($card[$column]) ? array_values($card[$column]) : [];
 
-                $card[$column][$i] = $this->randomUniqueNumber(
+                $card[$column][$i] = NumberUtilities::randomUniqueNumber(
                     $lowerBound,
                     $upperBound,
                     $excludedNumbers
@@ -46,14 +48,5 @@ class CardGenerator
         $card[$this->freeSpaces['column']][$this->freeSpaces['row']] = self::FREE;
 
         return $card;
-    }
-
-    private function randomUniqueNumber($lowerBound, $upperBound, $excludedNumbers): int
-    {
-        do {
-            $number = random_int($lowerBound, $upperBound);
-        } while (in_array($number, $excludedNumbers));
-
-        return $number;
     }
 }
