@@ -7,60 +7,57 @@ use PHPUnit\Framework\TestCase;
 
 class CardGeneratorTest extends TestCase
 {
-    public function testColumnBShouldContainNumbersLessOrEqualThan15()
+    private $card;
+
+    public function setUp()
     {
-        $cardGenerator = new CardGenerator();
+        $cardGenerator = new CardGenerator(
+            ['B','I','N','G','O'],
+            5,
+            75,
+            [
+                'column' => 'N',
+                'row' => 3
+            ]
+        );
 
-        $card = $cardGenerator->generate();
+        $this->card = $cardGenerator->generate();
 
-        for ($i = 1; $i <= 5; $i++) {
-            $this->assertLessThanOrEqual(15, $card['B'][$i]);
-        }
+        parent::setUp();
     }
 
-    public function testColumnBShouldContainUniqueNumbers()
+    public function testColumnBShouldContainNumbersLessOrEqualThan15()
     {
-        $cardGenerator = new CardGenerator();
-        $card = $cardGenerator->generate();
-
-        foreach ($card['B'] as $key => $value) {
-            $column = $card['B'];
-            unset($column[$key]);
-            $this->assertNotContains($value, $column);
+        for ($i = 1; $i <= 5; $i++) {
+            $this->assertLessThanOrEqual(15, $this->card['B'][$i]);
         }
     }
 
     public function testColumnIShouldContainNumbersGreaterOrEqualThan16AndLessOrEqualThan30()
     {
-        $cardGenerator = new CardGenerator();
-        $card = $cardGenerator->generate();
-
         for ($i = 1; $i <= 5; $i++) {
-            $this->assertGreaterThanOrEqual(16, $card['I'][$i]);
-            $this->assertLessThanOrEqual(30, $card['I'][$i]);
+            $this->assertGreaterThanOrEqual(16, $this->card['I'][$i]);
+            $this->assertLessThanOrEqual(30, $this->card['I'][$i]);
         }
     }
 
-    public function testColumnIShouldContainUniqueNumbers()
+    public function testColumnsShouldContainUniqueNumbers()
     {
-        $cardGenerator = new CardGenerator();
-        $card = $cardGenerator->generate();
+        foreach ($this->card['B'] as $key => $value) {
+            $column = $this->card['B'];
+            unset($column[$key]);
+            $this->assertNotContains($value, $column);
+        }
 
-        foreach ($card['I'] as $key => $value) {
-            $column = $card['I'];
+        foreach ($this->card['I'] as $key => $value) {
+            $column = $this->card['I'];
             unset($column[$key]);
             $this->assertNotContains($value, $column);
         }
     }
 
-    public function testColumnNShouldContainNumbersGreaterOrEqualThan31AndLessOrEqualThan45()
+    public function testShouldHaveOneFreeSpaceInTheMiddle()
     {
-        $cardGenerator = new CardGenerator();
-        $card = $cardGenerator->generate();
-
-        for ($i = 1; $i <= 5; $i++) {
-            $this->assertGreaterThanOrEqual(31, $card['N'][$i]);
-            $this->assertLessThanOrEqual(45, $card['N'][$i]);
-        }
+        $this->assertIsNotNumeric($this->card['N'][3]);
     }
 }
