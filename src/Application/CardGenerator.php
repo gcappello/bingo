@@ -16,8 +16,12 @@ class CardGenerator
 
     public const FREE = 'FREE';
 
-    public function __construct($columns, $rows, int $maxNumber, array $freeSpaces)
-    {
+    public function __construct(
+        $columns = ['B','I','N','G','O'],
+        $rows = 5,
+        int $maxNumber = 75,
+        array $freeSpaces = ['column' => 'N', 'row' => 3]
+    ) {
         $this->columns = $columns;
         $this->rows = $rows;
         $this->maxNumber = $maxNumber;
