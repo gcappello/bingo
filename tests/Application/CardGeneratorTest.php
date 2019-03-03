@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Test;
+namespace App\Test\Application;
 
-use App\CardGenerator;
+use App\Application\CardGenerator;
 use PHPUnit\Framework\TestCase;
 
 class CardGeneratorTest extends TestCase
