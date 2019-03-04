@@ -2,7 +2,7 @@
 
 namespace App\Application;
 
-use App\Domain\Model\CardDto;
+use App\Domain\Dto\CardDto;
 use App\Utility\NumberUtilities;
 
 class CardGenerator

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Model;
+namespace App\Domain\Dto;
 
 class CardDto
 {
