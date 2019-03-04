@@ -15,9 +15,4 @@ class Caller
 
         return $number;
     }
-
-    public function getDrawnNumbers()
-    {
-        return $this->pile;
-    }
 }
