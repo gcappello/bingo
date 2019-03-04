@@ -11,15 +11,7 @@ class CardGeneratorTest extends TestCase
 
     public function setUp()
     {
-        $cardGenerator = new CardGenerator(
-            ['B','I','N','G','O'],
-            5,
-            75,
-            [
-                'column' => 'N',
-                'row' => 3
-            ]
-        );
+        $cardGenerator = new CardGenerator();
 
         $this->card = $cardGenerator->generate();
 

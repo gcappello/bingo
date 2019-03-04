@@ -16,8 +16,14 @@ class CardGenerator
 
     public const FREE = 'FREE';
 
-    public function __construct($columns, $rows, int $maxNumber, array $freeSpaces)
-    {
+    private $card;
+
+    public function __construct(
+        $columns = ['B','I','N','G','O'],
+        $rows = 5,
+        int $maxNumber = 75,
+        array $freeSpaces = ['column' => 'N', 'row' => 3]
+    ) {
         $this->columns = $columns;
         $this->rows = $rows;
         $this->maxNumber = $maxNumber;
@@ -26,7 +32,7 @@ class CardGenerator
 
     public function generate(): array
     {
-        $card = [];
+        $this->card = [];
 
         $range = $this->maxNumber / count($this->columns);
 
@@ -35,9 +41,9 @@ class CardGenerator
             $upperBound = ($row + 1) * $range;
 
             for ($i = 1; $i <= $this->rows; $i++) {
-                $excludedNumbers = !empty($card[$column]) ? array_values($card[$column]) : [];
+                $excludedNumbers = !empty($this->card[$column]) ? array_values($this->card[$column]) : [];
 
-                $card[$column][$i] = NumberUtilities::randomUniqueNumber(
+                $this->card[$column][$i] = NumberUtilities::randomUniqueNumber(
                     $lowerBound,
                     $upperBound,
                     $excludedNumbers
@@ -45,8 +51,23 @@ class CardGenerator
             }
         }
 
-        $card[$this->freeSpaces['column']][$this->freeSpaces['row']] = self::FREE;
+        $this->card[$this->freeSpaces['column']][$this->freeSpaces['row']] = self::FREE;
 
-        return $card;
+        return $this->card;
+    }
+
+    public function getCardNumbers(): array
+    {
+        $drawnNumbers = [];
+
+        foreach ($this->card as $column) {
+            foreach ($column as $row => $number) {
+                if (is_numeric($number)) {
+                    $drawnNumbers[] = $number;
+                }
+            }
+        }
+
+        return $drawnNumbers;
     }
 }
