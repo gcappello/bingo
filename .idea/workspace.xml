@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43657394-e76e-43f8-8407-906b168050d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Caller.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Caller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/CardGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/CardGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Application/CallerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Application/CallerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Application/CardGeneratorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Application/CardGeneratorTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Application/CheckerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Application/CheckerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,63 +33,87 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/Application/CallerTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="504">
-                  <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#40#67#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/Application/CheckerTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                  <folding>
-                    <element signature="e#40#74#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/Application/CardGeneratorTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Application/CardGenerator.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Application/CallerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#40#67#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Application/CheckerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="e#40#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/Caller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Application/CardGeneratorTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-70">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/BingoGame.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/CardGenerator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+              <folding>
+                <element signature="e#35#64#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Domain/Model/CardDto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$cardGenerator</find>
       <find>$card</find>
+      <find>getCardNumbers</find>
+      <find>cardGenerator</find>
     </findStrings>
     <replaceStrings>
       <replace>$this-&gt;cardGenerator</replace>
@@ -106,12 +133,15 @@
         <option value="$PROJECT_DIR$/src/CardGenerator.php" />
         <option value="$PROJECT_DIR$/tests/CallerTest.php" />
         <option value="$PROJECT_DIR$/tests/CardGeneratorTest.php" />
-        <option value="$PROJECT_DIR$/tests/Application/CallerTest.php" />
         <option value="$PROJECT_DIR$/src/Application/CardChecker.php" />
+        <option value="$PROJECT_DIR$/src/Model/CardDto.php" />
+        <option value="$PROJECT_DIR$/tests/Application/CheckerTest.php" />
         <option value="$PROJECT_DIR$/tests/Application/CardGeneratorTest.php" />
+        <option value="$PROJECT_DIR$/tests/Application/CallerTest.php" />
+        <option value="$PROJECT_DIR$/src/Application/BingoGame.php" />
         <option value="$PROJECT_DIR$/src/Application/Caller.php" />
         <option value="$PROJECT_DIR$/src/Application/CardGenerator.php" />
-        <option value="$PROJECT_DIR$/tests/Application/CheckerTest.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Model/CardDto.php" />
       </list>
     </option>
   </component>
@@ -194,6 +224,19 @@
               <item name="bingo" type="b2602c69:ProjectViewProjectNode" />
               <item name="bingo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bingo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bingo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bingo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bingo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Utility" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -224,6 +267,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Domain" />
       <recent name="$PROJECT_DIR$/tests/Application" />
       <recent name="$PROJECT_DIR$/src/Application" />
       <recent name="$PROJECT_DIR$/tests" />
@@ -293,39 +337,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 13m 12s.xml">
+    <history-entry file="CheckerTest - 2019.03.04 at 11h 37m 05s.xml">
       <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 14m 41s.xml">
+    <history-entry file="CheckerTest - 2019.03.04 at 11h 37m 51s.xml">
       <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 15m 57s.xml">
+    <history-entry file="CallerTest_(1) - 2019.03.04 at 11h 40m 16s.xml">
+      <configuration name="CallerTest (1)" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CallerTest_(1) - 2019.03.04 at 11h 40m 19s.xml">
+      <configuration name="CallerTest (1)" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CardGeneratorTest_(1) - 2019.03.04 at 11h 40m 23s.xml">
+      <configuration name="CardGeneratorTest (1)" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CheckerTest - 2019.03.04 at 11h 40m 26s.xml">
       <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 17m 15s.xml">
+    <history-entry file="CheckerTest - 2019.03.04 at 11h 41m 03s.xml">
       <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 17m 23s.xml">
-      <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CallerTest_(1) - 2019.03.04 at 11h 43m 01s.xml">
+      <configuration name="CallerTest (1)" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 17m 31s.xml">
-      <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CardGeneratorTest_(1) - 2019.03.04 at 11h 43m 04s.xml">
+      <configuration name="CardGeneratorTest (1)" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 24m 22s.xml">
-      <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 25m 41s.xml">
-      <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 25m 44s.xml">
-      <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CheckerTest - 2019.03.04 at 09h 35m 12s.xml">
+    <history-entry file="CheckerTest - 2019.03.04 at 11h 43m 08s.xml">
       <configuration name="CheckerTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28872000" />
+    <option name="totallyTimeSpent" value="32804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1080" extended-state="6" />
@@ -334,7 +378,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.18996799" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Run" order="3" weight="0.25987193" />
+      <window_info id="Run" order="3" weight="0.28762007" />
       <window_info anchor="bottom" id="Docker" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
@@ -377,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="840" column="9" selection-start-line="840" selection-start-column="9" selection-end-line="840" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -398,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Caller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/CardChecker.php" />
     <entry file="file://$PROJECT_DIR$/src/Utility/NumberUtilities.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -413,10 +443,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="840" column="9" selection-start-line="840" selection-start-column="9" selection-end-line="840" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Caller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/CardGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#35#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Application/CallerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="146">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#40#67#0#PHP" expanded="true" />
           </folding>
@@ -425,25 +479,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Application/CardGeneratorTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/CardGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="-70">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Application/CheckerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <element signature="e#40#74#0#PHP" expanded="true" />
+            <element signature="e#40#70#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/BingoGame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Model/CardDto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>

@@ -7,11 +7,21 @@ use PHPUnit\Framework\TestCase;
 
 class CallerTest extends TestCase
 {
+    /** @var Caller */
+    private $caller;
+
+    protected function setUp()
+    {
+        $this->caller = new Caller();
+
+        parent::setUp();
+    }
+
     public function testCalledNumberGreaterThan1AndLessOrEqualThan75()
     {
-        $caller = new Caller();
+        $this->caller->reset();
 
-        $number = $caller->draw();
+        $number = $this->caller->draw();
 
         $this->assertGreaterThanOrEqual(1, $number);
         $this->assertLessThanOrEqual(75, $number);
@@ -19,11 +29,12 @@ class CallerTest extends TestCase
 
     public function testAllTheNumbersShouldHaveBeenCalled()
     {
-        $caller = new Caller();
+        $this->caller->reset();
+
         $numbers = [];
 
         for ($i = 0; $i < 75; $i++) {
-            array_push($numbers, $caller->draw());
+            array_push($numbers, $this->caller->draw());
         }
 
         sort($numbers);

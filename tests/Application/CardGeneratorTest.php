@@ -7,13 +7,14 @@ use PHPUnit\Framework\TestCase;
 
 class CardGeneratorTest extends TestCase
 {
-    private $card;
+    /** @var array */
+    private $cardArray;
 
     public function setUp()
     {
         $cardGenerator = new CardGenerator();
 
-        $this->card = $cardGenerator->generate();
+        $this->cardArray = $cardGenerator->generate()->toArray();
 
         parent::setUp();
     }
@@ -21,28 +22,28 @@ class CardGeneratorTest extends TestCase
     public function testColumnBShouldContainNumbersLessOrEqualThan15()
     {
         for ($i = 1; $i <= 5; $i++) {
-            $this->assertLessThanOrEqual(15, $this->card['B'][$i]);
+            $this->assertLessThanOrEqual(15, $this->cardArray['B'][$i]);
         }
     }
 
     public function testColumnIShouldContainNumbersGreaterOrEqualThan16AndLessOrEqualThan30()
     {
         for ($i = 1; $i <= 5; $i++) {
-            $this->assertGreaterThanOrEqual(16, $this->card['I'][$i]);
-            $this->assertLessThanOrEqual(30, $this->card['I'][$i]);
+            $this->assertGreaterThanOrEqual(16, $this->cardArray['I'][$i]);
+            $this->assertLessThanOrEqual(30, $this->cardArray['I'][$i]);
         }
     }
 
     public function testColumnsShouldContainUniqueNumbers()
     {
-        foreach ($this->card['B'] as $key => $value) {
-            $column = $this->card['B'];
+        foreach ($this->cardArray['B'] as $key => $value) {
+            $column = $this->cardArray['B'];
             unset($column[$key]);
             $this->assertNotContains($value, $column);
         }
 
-        foreach ($this->card['I'] as $key => $value) {
-            $column = $this->card['I'];
+        foreach ($this->cardArray['I'] as $key => $value) {
+            $column = $this->cardArray['I'];
             unset($column[$key]);
             $this->assertNotContains($value, $column);
         }
@@ -50,6 +51,6 @@ class CardGeneratorTest extends TestCase
 
     public function testShouldHaveOneFreeSpaceInTheMiddle()
     {
-        $this->assertIsNotNumeric($this->card['N'][3]);
+        $this->assertIsNotNumeric($this->cardArray['N'][3]);
     }
 }

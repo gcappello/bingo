@@ -2,54 +2,38 @@
 
 namespace App\Test\Application;
 
-use App\Application\CardGenerator;
+use App\Application\BingoGame;
 use App\Utility\NumberUtilities;
 use PHPUnit\Framework\TestCase;
 
 class CheckerTest extends TestCase
 {
-    private $cardGenerator;
+    /** @var BingoGame */
+    private $bingoGame;
 
     protected function setUp()
     {
-        $this->cardGenerator = new CardGenerator();
+        $this->bingoGame = new BingoGame();
 
         parent::setUp();
     }
 
     public function testWinningPlayer()
     {
-        $card = $this->cardGenerator->generate();
-        $drawnNumbers = $this->cardGenerator->getCardNumbers();
+        $playerCard = $this->bingoGame->generateCard();
+        $drawnNumbers = $playerCard->getNumbers();
 
-        $winner = true;
-        foreach ($card as $column) {
-            foreach ($column as $row => $number) {
-                if (is_numeric($number) && !in_array($number, $drawnNumbers)) {
-                    $winner = false;
-                }
-            }
-        }
-
-        $this->assertTrue($winner);
+        $this->assertTrue($this->bingoGame->isWinningCard($playerCard, $drawnNumbers));
     }
 
     public function testNoWinningPlayer()
     {
-        $card = $this->cardGenerator->generate();
-        $drawnNumbers = $this->cardGenerator->getCardNumbers();
+        $playerCard = $this->bingoGame->generateCard();
+        $drawnNumbers = $playerCard->getNumbers();
 
-        $drawnNumbers[0] = NumberUtilities::randomUniqueNumber(1, 15, $card['B']);
+        $playerCardArray = $playerCard->toArray();
+        $drawnNumbers[0] = NumberUtilities::randomUniqueNumber(1, 15, $playerCardArray['B']);
 
-        $winner = true;
-        foreach ($card as $column) {
-            foreach ($column as $row => $number) {
-                if (is_numeric($number) && !in_array($number, $drawnNumbers)) {
-                    $winner = false;
-                }
-            }
-        }
-
-        $this->assertFalse($winner);
+        $this->assertFalse($this->bingoGame->isWinningCard($playerCard, $drawnNumbers));
     }
 }
