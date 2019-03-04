@@ -2,25 +2,28 @@
 
 namespace App\Application;
 
+use App\Domain\Model\CardDto;
 use App\Utility\NumberUtilities;
 
 class CardGenerator
 {
+    /** @var array */
     private $columns;
 
+    /** @var int */
     private $rows;
 
+    /** @var int */
     private $maxNumber;
 
+    /** @var array */
     private $freeSpaces;
 
     public const FREE = 'FREE';
 
-    private $card;
-
     public function __construct(
-        $columns = ['B','I','N','G','O'],
-        $rows = 5,
+        array $columns = ['B','I','N','G','O'],
+        int $rows = 5,
         int $maxNumber = 75,
         array $freeSpaces = ['column' => 'N', 'row' => 3]
     ) {
@@ -30,9 +33,9 @@ class CardGenerator
         $this->freeSpaces = $freeSpaces;
     }
 
-    public function generate(): array
+    public function generate(): CardDto
     {
-        $this->card = [];
+        $card = [];
 
         $range = $this->maxNumber / count($this->columns);
 
@@ -41,9 +44,9 @@ class CardGenerator
             $upperBound = ($row + 1) * $range;
 
             for ($i = 1; $i <= $this->rows; $i++) {
-                $excludedNumbers = !empty($this->card[$column]) ? array_values($this->card[$column]) : [];
+                $excludedNumbers = !empty($card[$column]) ? array_values($card[$column]) : [];
 
-                $this->card[$column][$i] = NumberUtilities::randomUniqueNumber(
+                $card[$column][$i] = NumberUtilities::randomUniqueNumber(
                     $lowerBound,
                     $upperBound,
                     $excludedNumbers
@@ -51,23 +54,8 @@ class CardGenerator
             }
         }
 
-        $this->card[$this->freeSpaces['column']][$this->freeSpaces['row']] = self::FREE;
+        $card[$this->freeSpaces['column']][$this->freeSpaces['row']] = self::FREE;
 
-        return $this->card;
-    }
-
-    public function getCardNumbers(): array
-    {
-        $drawnNumbers = [];
-
-        foreach ($this->card as $column) {
-            foreach ($column as $row => $number) {
-                if (is_numeric($number)) {
-                    $drawnNumbers[] = $number;
-                }
-            }
-        }
-
-        return $drawnNumbers;
+        return new CardDto($card);
     }
 }
